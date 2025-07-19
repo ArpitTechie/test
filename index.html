@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Daily Schedule</h1>
+        <div class="schedule">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-task-btn">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+        <div class="congratulations">
+            <h2 id="congrats-message" class="hidden">
+                Congratulations! You've completed all your tasks!
+                <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjV5MzFzN3Nqemg2cWp6c3g0b3c3b3c3b3c3b3c3b3c3b3c3/3o7abGAYR3xS1A29gY/giphy.gif" alt="Congratulations" width="200">
+            </h2>
+        </div>
+        <div class="daily-log">
+            <h2>What I Did Today</h2>
+            <textarea id="daily-log-input" placeholder="Write about your day..."></textarea>
+        </div>
+        <div class="weekly-chart">
+            <h2>Weekly Progress</h2>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,31 @@
+#character-container {
+    position: fixed;
+    top: 100px;
+    left: -200px;
+    animation: slide-in 2s forwards, slide-out 2s 4s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 20px;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 20px;
+    }
+    to {
+        left: -200px;
+    }
+}
+
 body {
     font-family: sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
     color: #333;
     display: flex;
     justify-content: center;
@@ -13,9 +38,30 @@ body {
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     width: 80%;
     max-width: 800px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+.container:hover {
+    transform: perspective(1000px) rotateY(5deg);
+}
+
+#date-container {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
 h1, h2 {
